@@ -1,4 +1,4 @@
-package org.example;
+package org.ayubyusuf;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -32,17 +32,17 @@ public class IPAddress {
 			System.out.println();
 
 			// Demonstrate reverse DNS lookup
-			reverseDnsLookup("8.8.8.8");
+			reverseDnsLookup();
 
 		} catch (UnknownHostException e) {
 			System.err.println("Host could not be resolved: " + e.getMessage());
 		}
 	}
 
-	private static void reverseDnsLookup(String ipAddress) {
+	private static void reverseDnsLookup() {
 		try {
-			InetAddress address = InetAddress.getByName(ipAddress);
-			System.out.println("Reverse DNS lookup for " + ipAddress + ": " + address.getHostName());
+			InetAddress address = InetAddress.getByName("8.8.8.8");
+			System.out.println("Reverse DNS lookup for " + "8.8.8.8" + ": " + address.getHostName());
 		} catch (UnknownHostException e) {
 			System.err.println("Error during reverse DNS lookup: " + e.getMessage());
 		}
